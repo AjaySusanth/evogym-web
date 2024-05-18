@@ -35,19 +35,30 @@ const index = ({isTopOfPage, selectedPage,setSelectedPage}: Props) => {
                                 page="Home"
                                 selectedPage={selectedPage} 
                                 setSelectedPage={setSelectedPage}
+                                isMenuToggled={isMenuToggled}
+                                setisMenuToggled={setisMenuToggled}
                                 />
 
                                 <Link page="Benefits" 
                                 selectedPage={selectedPage}
-                                setSelectedPage={setSelectedPage}/>
+                                setSelectedPage={setSelectedPage}
+                                isMenuToggled={isMenuToggled}
+                                setisMenuToggled={setisMenuToggled}
+                                />
 
                                 <Link page="Our Classes" 
                                 selectedPage={selectedPage}
-                                setSelectedPage={setSelectedPage}/>
+                                setSelectedPage={setSelectedPage}
+                                isMenuToggled={isMenuToggled}
+                                setisMenuToggled={setisMenuToggled}
+                                />
 
                                 <Link page="Contact Us" 
                                 selectedPage={selectedPage}
-                                setSelectedPage={setSelectedPage}/>
+                                setSelectedPage={setSelectedPage}
+                                isMenuToggled={isMenuToggled}
+                                setisMenuToggled={setisMenuToggled}
+                                />
 
                             </div>
                             <div className={`${flexBetween} gap-8`}>
@@ -69,7 +80,7 @@ const index = ({isTopOfPage, selectedPage,setSelectedPage}: Props) => {
         </div>
         {/* Mobile Menu */}
         {!isAboveMediumScreens && isMenuToggled && (
-            <div className="fixed right-0 bottom-0 h-full w-[300px] z-40 bg-primary-100 drop-shadow-xl">
+            <div className="fixed right-0 bottom-0 h-full w-[300px] z-[60] bg-primary-100 drop-shadow-xl">
                 {/* Close icon */ }
                 <div className="flex justify-end p-10">
                     <button onClick={()=> setisMenuToggled(!isMenuToggled)}>
@@ -82,19 +93,30 @@ const index = ({isTopOfPage, selectedPage,setSelectedPage}: Props) => {
                      <Link 
                      page="Home"
                      selectedPage={selectedPage} 
-                     setSelectedPage={setSelectedPage}/>
+                     setSelectedPage={setSelectedPage}
+                     isMenuToggled={isMenuToggled}
+                     setisMenuToggled={setisMenuToggled}/>
 
                      <Link page="Benefits" 
                      selectedPage={selectedPage}
-                     setSelectedPage={setSelectedPage}/>
+                     setSelectedPage={setSelectedPage}
+                     isMenuToggled={isMenuToggled}
+                     setisMenuToggled={setisMenuToggled}
+                     />
 
                     <Link page="Our Classes" 
                      selectedPage={selectedPage}
-                     setSelectedPage={setSelectedPage}/>
+                     setSelectedPage={setSelectedPage}
+                     isMenuToggled={isMenuToggled}
+                     setisMenuToggled={setisMenuToggled}
+                     />
 
                     <Link page="Contact Us" 
                     selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}/>            
+                    setSelectedPage={setSelectedPage}
+                    isMenuToggled={isMenuToggled}
+                    setisMenuToggled={setisMenuToggled}
+                    />            
 
                 </div>
 
