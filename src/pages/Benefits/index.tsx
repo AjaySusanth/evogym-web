@@ -4,7 +4,7 @@ import { AcademicCapIcon, HomeModernIcon, UserGroupIcon } from "@heroicons/react
 import { motion } from "framer-motion"
 import BenefitCard from "./BenefitCard"
 import ActionButton from "@/shared/ActionButton"
-import BenefitsPageGrapic from "@/assets/BenefitsPageGraphic.png"
+import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png"
 
 
 type Props = {
@@ -33,13 +33,6 @@ const Benefits = ({setSelectedPage}: Props) => {
     },
   ];
 
-  const container = {
-    hidden: {},
-    visible: {
-        transition: {staggerChildren:0.2},
-    },
-}
-
   return (
     <section id="benefits" className="mx-auto min-h-full w-5/6 py-20">
       <motion.div
@@ -65,15 +58,13 @@ const Benefits = ({setSelectedPage}: Props) => {
         </motion.div>
 
         {/* Benefit cards */}
-        <motion.div 
+        <div 
           className="mt-5 items-center justify-between gap-8 md:flex"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{once: true, amount: 0.5}}
-          variants={container}
+
           >
-          {benefits.map((benefit: BenefitType)=>(
+          {benefits.map((benefit: BenefitType,index)=>(
             <BenefitCard
+              index = {index}
               key = {benefit.title}
               icon = {benefit.icon}
               title = {benefit.title}
@@ -81,11 +72,11 @@ const Benefits = ({setSelectedPage}: Props) => {
               setSelectedPage = {setSelectedPage}
             />
           ))}
-        </motion.div>
+        </div>
 
         <div className="mt-16 items-center justify-between gap-20 md:flex md:mt-28">
 
-          <img src={BenefitsPageGrapic} alt="benefits-graphic" className="mx-auto"/>
+          <img src={BenefitsPageGraphic} alt="benefits-graphic" className="mx-auto"/>
 
           <div>
 

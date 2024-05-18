@@ -10,7 +10,7 @@ type Props = {
 }
 const ContactUs = ({setSelectedPage}: Props) => {
 
-    const inputStyles = `w-full rounded-lg px-5 py-3 mb-5 placeholder-white bg-primary-300`
+    const inputStyles = `w-full rounded-lg px-5 py-3 mt-5 placeholder-white bg-primary-300`
 
     const {
         register,
@@ -63,7 +63,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
                     <form
                     target="_blank"
                     onSubmit={onSubmit}
-                    action="https://formsubmit.co/your@email.com"
+                    action="https://formsubmit.co/2c4989309cdb9003dbb94644052181c7"
                     method="POST"
                     >
                         <input 
